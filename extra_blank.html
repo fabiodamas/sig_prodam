@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8" />
-	<title>Metronic | Extra - Blank Page</title>
+	<title>Painel SIG - Sistema de Informações Gerenciais</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -14,20 +14,24 @@
 	<link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
 	<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 	<link href="assets/css/style.css" rel="stylesheet" />
+        <link href="assets/teste/examples.css" rel="stylesheet" />
+        
 	<link href="assets/css/style_responsive.css" rel="stylesheet" />
 	<link href="assets/css/style_default.css" rel="stylesheet" id="style_color" />
 	<link rel="stylesheet" type="text/css" href="assets/chosen-bootstrap/chosen/chosen.css" />
 	<link rel="stylesheet" type="text/css" href="assets/uniform/css/uniform.default.css" />
 	<link rel="shortcut icon" href="favicon.ico" />
-        <script src="assets/teste/jquery.js"></script>
         
-<script type="text/javascript">
+        <script src="assets/teste/jquery.js"></script>        
+        <script src="assets/teste/jquery.flot.js"></script>
+        <script src="assets/teste/jquery.flot.categories.js"></script>                
+        <script type="text/javascript">
 
 	$(function() {
 
 		var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
 
-		$.plot("#placeholder", [ data ], {
+		$.plot("#placeholder1", [ data ], {
 			series: {
 				bars: {
 					show: true,
@@ -37,16 +41,51 @@
 			},
 			xaxis: {
 				mode: "categories",
-				tickLength: 0
+				tickLength: 10
+                                
+			},
+			yaxis: {
+                                tickLength: 10
+                                
 			}
+                        
+                        
 		});
-
-		// Add the Flot version string to the footer
-
-		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
 	});
 
 	</script>
+        
+        
+        <script type="text/javascript">
+
+	$(function() {
+
+		var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+
+		$.plot("#placeholder2", [ data ], {
+			series: {
+				bars: {
+					show: true,
+					barWidth: 0.6,
+					align: "center"
+				}
+			},
+			xaxis: {
+				mode: "categories",
+				tickLength: 10
+                                
+			},
+			yaxis: {
+                                tickLength: 10
+                                
+			}
+                        
+                        
+		});
+
+	});
+
+	</script>        
         
         
 </head>
@@ -470,20 +509,8 @@
 						<!-- END BEGIN STYLE CUSTOMIZER --> 
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->			
 						<h3 class="page-title">
-							Blank Page				<small>blank & starter page sample</small>
+							Painel SIG - 			<small>Sistema de Informações Gerenciais</small>
 						</h3>
-						<ul class="breadcrumb">
-							<li>
-								<i class="icon-home"></i>
-								<a href="index.html">Home</a> 
-								<i class="icon-angle-right"></i>
-							</li>
-							<li>
-								<a href="#">Extra</a>
-								<i class="icon-angle-right"></i>
-							</li>
-							<li><a href="#">Blank Page</a></li>
-						</ul>
 						<!-- END PAGE TITLE & BREADCRUMB-->
 					</div>
 				</div>
@@ -511,13 +538,15 @@
                                                                                     </ul>
                                                                                     <div class="tab-content">
                                                                                             <div class="tab-pane active" id="tab_1_1">
-                                                                                                <div id="chart_1" class="chart"></div>
+                                                                                                <div class="demo-container1">
+                                                                                                        <div id="placeholder1" class="demo-placeholder1"></div>
+                                                                                                </div>                                                                                                
                                                                                             </div>
                                                                                         
                                                                                             <div class="tab-pane" id="tab_1_2">
                                                                                                 
-                                                                                                <div class="demo-container">
-                                                                                                        <div id="placeholder" class="demo-placeholder"></div>
+                                                                                                <div class="demo-container2">
+                                                                                                        <div id="placeholder2" class="demo-placeholder2"></div>
                                                                                                 </div>
                                                                                                 
                                                                                             </div>
@@ -615,12 +644,13 @@
 	<script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>
 	<script type="text/javascript" src="assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
         
-	<script src="assets/flot/jquery.flot.js"></script>
+        <script src="assets/teste/jquery.flot.js"></script>
+        <script src="assets/teste/jquery.flot.categories.js"></script>                
 	<script src="assets/flot/jquery.flot.resize.js"></script>
 	<script src="assets/flot/jquery.flot.pie.js"></script>
 	<script src="assets/flot/jquery.flot.stack.js"></script>
 	<script src="assets/flot/jquery.flot.crosshair.js"></script>
-	<script src="assets/flot/jquery.flot.categories.js"></script>
+        
         
 	<!-- ie8 fixes -->
 	<!--[if lt IE 9]>

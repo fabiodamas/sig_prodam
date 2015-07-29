@@ -16,14 +16,12 @@
 	<link href="assets/css/style.css" rel="stylesheet" />
 	<link href="assets/css/style_responsive.css" rel="stylesheet" />
 	<link href="assets/css/style_default.css" rel="stylesheet" id="style_color" />
+	<link rel="stylesheet" type="text/css" href="assets/chosen-bootstrap/chosen/chosen.css" />
 	<link rel="stylesheet" type="text/css" href="assets/uniform/css/uniform.default.css" />
 	<link rel="shortcut icon" href="favicon.ico" />
+        <script src="assets/teste/jquery.js"></script>
         
-	<script language="javascript" type="text/javascript" src="assets/teste/jquery.js"></script>
-	<script language="javascript" type="text/javascript" src="assets/teste/jquery.flot.js"></script>
-	<script language="javascript" type="text/javascript" src="assets/teste/jquery.flot.categories.js"></script>        
-        
-	<script type="text/javascript">
+<script type="text/javascript">
 
 	$(function() {
 
@@ -492,7 +490,7 @@
 				<!-- END PAGE HEADER-->
 				<!-- BEGIN PAGE CONTENT-->
 				<div class="row-fluid">
-                                    <div class="span7">
+                                    <div class="span7" style="width: 69%">
                                             <!-- BEGIN INLINE TABS PORTLET-->
                                             <div class="portlet box green">
                                                     <div class="portlet-title">
@@ -515,9 +513,11 @@
                                                                                             <div class="tab-pane active" id="tab_1_1">
                                                                                                 <div id="chart_1" class="chart"></div>
                                                                                             </div>
+                                                                                        
                                                                                             <div class="tab-pane" id="tab_1_2">
+                                                                                                
                                                                                                 <div class="demo-container">
-                                                                                                    <div id="placeholder" class="demo-placeholder"></div>
+                                                                                                        <div id="placeholder" class="demo-placeholder"></div>
                                                                                                 </div>
                                                                                                 
                                                                                             </div>
@@ -527,21 +527,28 @@
                                                                     </div>
                                                                 
                                                                     <div class="span4 responsive" data-tablet="span6" data-desktop="span4">
-                                                                            <div class="dashboard-stat green">
-                                                                                        <a href="#">
-                                                                                    <div class="visual">
+                                                                        <!-- <a class="btn purple big">pricing options <i class="m-icon-big-swapright m-icon-white"></i></a> -->
+
+                                                                        
+                                                                        <div class="dashboard-stat green">
+                                                                                
+                                                                                
+                                                                                    <a href="#">
+                                                                                        <div class="visual">
                                                                                             <i class="icon-shopping-cart"></i>
-                                                                                    </div>
-                                                                                    <div class="details">
-                                                                                            <div class="number">549</div>
-                                                                                            <div class="desc">New Orders</div>
-                                                                                            <div class="desc">New Orders</div>
-                                                                                    </div>
+                                                                                        </div>
+                                                                                        <div class="details">
+                                                                                                <div class="number">549</div>
+                                                                                                <div class="desc">New Orders</div>
+                                                                                                <div class="desc">New Orders</div>
+                                                                                        </div>
                                                                                     </a>
                                                                                     <a class="more" href="#">
-                                                                                    Detalhes <i class="m-icon-swapright m-icon-white"></i>
-                                                                                    </a>						
-                                                                            </div>
+                                                                                        Detalhes <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>
+                                                                                
+                                                                        </div>
+                                                                           
                                                                     </div>
                                                             </div>
                                   
@@ -554,7 +561,7 @@
                                     </div>
 
                                     
-                                    <div class="span5">
+                                    <div class="span5" style="width: 30%;margin-left:10px">
                                             <!-- BEGIN INLINE TABS PORTLET-->
                                             <div class="portlet box green">
                                                     <div class="portlet-title">
@@ -598,31 +605,45 @@
 	<!-- END FOOTER -->
 	<!-- BEGIN JAVASCRIPTS -->
 	<!-- Load javascripts at bottom, this will reduce page load time -->
-	<script src="assets/js/jquery-1.8.3.min.js"></script>	
+	<script src="assets/js/jquery-1.8.3.min.js"></script>			
+	<script src="assets/breakpoints/breakpoints.js"></script>			
+	<script src="assets/jquery-slimscroll/jquery-ui-1.9.2.custom.min.js"></script>	
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.blockui.js"></script>		
+	<script src="assets/js/jquery.blockui.js"></script>
 	<script src="assets/js/jquery.cookie.js"></script>
-	<script src="assets/breakpoints/breakpoints.js"></script>
-	<!-- ie8 fixes -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/excanvas.js"></script>
-	<script src="assets/js/respond.js"></script>
-	<![endif]-->
+	<script src="assets/fullcalendar/fullcalendar/fullcalendar.min.js"></script>	
+	<script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>
+	<script type="text/javascript" src="assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
         
 	<script src="assets/flot/jquery.flot.js"></script>
 	<script src="assets/flot/jquery.flot.resize.js"></script>
 	<script src="assets/flot/jquery.flot.pie.js"></script>
 	<script src="assets/flot/jquery.flot.stack.js"></script>
 	<script src="assets/flot/jquery.flot.crosshair.js"></script>
-	<script src="assets/flot/jquery.flot.categories.js"></script>        
-	<script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>	
+	<script src="assets/flot/jquery.flot.categories.js"></script>
+        
+	<!-- ie8 fixes -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/excanvas.js"></script>
+	<script src="assets/js/respond.js"></script>
+	<![endif]-->
 	<script src="assets/js/app.js"></script>		
 	<script>
-		jQuery(document).ready(function() {		
+		jQuery(document).ready(function() {			
+			// initiate layout and plugins
+			App.setPage('calendar');
+			App.init();
+		});
+	</script>
+        
+	<script>
+		jQuery(document).ready(function() {			
+			// initiate layout and plugins
 			App.setPage('charts');
 			App.init();
 		});
 	</script>
+        
 	<!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->

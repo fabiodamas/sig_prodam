@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8" />
-	<title>Metronic | Extra - Blank Page</title>
+	<title>Metronic | Visual Charts</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -17,40 +17,7 @@
 	<link href="assets/css/style_responsive.css" rel="stylesheet" />
 	<link href="assets/css/style_default.css" rel="stylesheet" id="style_color" />
 	<link rel="stylesheet" type="text/css" href="assets/uniform/css/uniform.default.css" />
-	<link rel="shortcut icon" href="favicon.ico" />
-        
-	<script language="javascript" type="text/javascript" src="assets/teste/jquery.js"></script>
-	<script language="javascript" type="text/javascript" src="assets/teste/jquery.flot.js"></script>
-	<script language="javascript" type="text/javascript" src="assets/teste/jquery.flot.categories.js"></script>        
-        
-	<script type="text/javascript">
-
-	$(function() {
-
-		var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
-
-		$.plot("#placeholder", [ data ], {
-			series: {
-				bars: {
-					show: true,
-					barWidth: 0.6,
-					align: "center"
-				}
-			},
-			xaxis: {
-				mode: "categories",
-				tickLength: 0
-			}
-		});
-
-		// Add the Flot version string to the footer
-
-		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
-	});
-
-	</script>
-        
-        
+	<link rel="shortcut icon" href="favicon.ico" />        
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -385,10 +352,11 @@
 						<li ><a href="maps_vector.html">Vector Maps</a></li>
 					</ul>
 				</li>
-				<li class="">
+				<li class="active ">
 					<a href="charts.html">
 					<i class="icon-bar-chart"></i> 
 					<span class="title">Visual Charts</span>
+					<span class="selected"></span>
 					</a>
 				</li>
 				<li class="">
@@ -403,12 +371,11 @@
 					<span class="title">Gallery</span>
 					</a>
 				</li>
-				<li class="active has-sub ">
+				<li class="has-sub ">
 					<a href="javascript:;">
 					<i class="icon-briefcase"></i> 
 					<span class="title">Extra</span>
-					<span class="selected"></span>
-					<span class="arrow open"></span>
+					<span class="arrow "></span>
 					</a>
 					<ul class="sub">
 						<li ><a href="extra_profile.html">User Profile</a></li>
@@ -418,7 +385,7 @@
 						<li ><a href="extra_pricing_table.html">Pricing Tables</a></li>
 						<li ><a href="extra_404.html">404 Page</a></li>
 						<li ><a href="extra_500.html">500 Page</a></li>
-						<li class="active"><a href="extra_blank.html">Blank Page</a></li>
+						<li ><a href="extra_blank.html">Blank Page</a></li>
 						<li ><a href="extra_full_width.html">Full Width Page</a></li>
 					</ul>
 				</li>
@@ -469,10 +436,10 @@
 								</label>							
 							</div>
 						</div>
-						<!-- END BEGIN STYLE CUSTOMIZER --> 
+						<!-- END BEGIN STYLE CUSTOMIZER --> 			
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->			
 						<h3 class="page-title">
-							Blank Page				<small>blank & starter page sample</small>
+							Visual Charts				<small>visual charts & graphs</small>
 						</h3>
 						<ul class="breadcrumb">
 							<li>
@@ -480,112 +447,171 @@
 								<a href="index.html">Home</a> 
 								<i class="icon-angle-right"></i>
 							</li>
-							<li>
-								<a href="#">Extra</a>
-								<i class="icon-angle-right"></i>
-							</li>
-							<li><a href="#">Blank Page</a></li>
+							<li><a href="#">Visual Charts</a></li>
 						</ul>
 						<!-- END PAGE TITLE & BREADCRUMB-->
 					</div>
 				</div>
 				<!-- END PAGE HEADER-->
-				<!-- BEGIN PAGE CONTENT-->
+				<!-- BEGIN CHART PORTLETS-->
 				<div class="row-fluid">
-                                    <div class="span7">
-                                            <!-- BEGIN INLINE TABS PORTLET-->
-                                            <div class="portlet box green">
-                                                    <div class="portlet-title">
-                                                            <h4><i class="icon-reorder"></i>Internações</h4>
-                                                            <div class="tools">
-                                                                    <a href="javascript:;" class="collapse"></a>
-                                                                    <a href="#portlet-config" data-toggle="modal" class="config"></a>
-                                                            </div>
-                                                    </div>
-                                                    <div class="portlet-body">
-                                                            <div class="row-fluid">
-                                                                    <div class="span8">
-                                                                            <!--BEGIN TABS-->
-                                                                            <div class="tabbable tabbable-custom">
-                                                                                    <ul class="nav nav-tabs">
-                                                                                            <li class="active"><a href="#tab_1_1" data-toggle="tab">Histórico de Internação</a></li>
-                                                                                            <li class=""><a href="#tab_1_2" data-toggle="tab">Histórico de Altas</a></li>
-                                                                                    </ul>
-                                                                                    <div class="tab-content">
-                                                                                            <div class="tab-pane active" id="tab_1_1">
-                                                                                                <div id="chart_1" class="chart"></div>
-                                                                                            </div>
-                                                                                            <div class="tab-pane" id="tab_1_2">
-                                                                                                <div class="demo-container">
-                                                                                                    <div id="placeholder" class="demo-placeholder"></div>
-                                                                                                </div>
-                                                                                                
-                                                                                            </div>
-                                                                                    </div>
-                                                                            </div>
-                                                                            <!--END TABS-->
-                                                                    </div>
-                                                                
-                                                                    <div class="span4 responsive" data-tablet="span6" data-desktop="span4">
-                                                                            <div class="dashboard-stat green">
-                                                                                        <a href="#">
-                                                                                    <div class="visual">
-                                                                                            <i class="icon-shopping-cart"></i>
-                                                                                    </div>
-                                                                                    <div class="details">
-                                                                                            <div class="number">549</div>
-                                                                                            <div class="desc">New Orders</div>
-                                                                                            <div class="desc">New Orders</div>
-                                                                                    </div>
-                                                                                    </a>
-                                                                                    <a class="more" href="#">
-                                                                                    Detalhes <i class="m-icon-swapright m-icon-white"></i>
-                                                                                    </a>						
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                  
-                                                        
-                                                        
-                                                        
-                                                    </div>
-                                            </div>
-                                            <!-- END INLINE TABS PORTLET-->
-                                    </div>
-
-                                    
-                                    <div class="span5">
-                                            <!-- BEGIN INLINE TABS PORTLET-->
-                                            <div class="portlet box green">
-                                                    <div class="portlet-title">
-                                                            <h4><i class="icon-reorder"></i>Detalhes</h4>
-                                                            <div class="tools">
-                                                                    <a href="javascript:;" class="collapse"></a>
-                                                                    <a href="#portlet-config" data-toggle="modal" class="config"></a>
-                                                            </div>
-                                                    </div>
-                                                    <div class="portlet-body">
-                                                            <div class="row-fluid">
-                                                                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. </p>
-                                                                <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa. </p>
-                                                                <p>Casamentiss faiz malandris se pirulitá, Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer Ispecialista im mé intende tudis nuam golada, vinho, uiski, carirí, rum da jamaikis, só num pode ser mijis. Adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-                                                                <p>Cevadis im ampola pa arma uma pindureta. Nam varius eleifend orci, sed viverra nisl condimentum ut. Donec eget justis enim. Atirei o pau no gatis. Viva Forevis aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Copo furadis é disculpa de babadis, arcu quam euismod magna, bibendum egestas augue arcu ut est. Delegadis gente finis. In sit amet mattis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis. Pellentesque viverra accumsan ipsum elementum gravidis. </p>
-                                                                
-                                                                
-                                                                
-                                                                
-                                                            </div>
-                                                    </div>
-                                            </div>
-                                            <!-- END INLINE TABS PORTLET-->
-                                    </div>
-                                    
+					<div class="span12">
+						<!-- BEGIN BASIC CHART PORTLET-->
+						<div class="portlet box yellow">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Basic Chart</h4>
+								<div class="tools">
+									<a href="javascript:;" class="collapse"></a>
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+									<a href="javascript:;" class="remove"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="chart_1" class="chart"></div>
+							</div>
+						</div>
+						<!-- END BASIC CHART PORTLET-->						
+						<!-- BEGIN TRACKING CURVES PORTLET-->
+						<div class="portlet box green">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Tracking Curves</h4>
+								<div class="tools">
+									<a href="javascript:;" class="collapse"></a>
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+									<a href="javascript:;" class="remove"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="chart_3" class="chart"></div>
+							</div>
+						</div>
+						<!-- END TRACKING CURVES PORTLET-->
+						<!-- BEGIN DYNAMIC CHART PORTLET-->
+						<div class="portlet box blue">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Dynamic Chart</h4>
+								<div class="tools">
+									<a href="javascript:;" class="collapse"></a>
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+									<a href="javascript:;" class="remove"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="chart_4" class="chart"></div>
+							</div>
+						</div>
+						<!-- END DYNAMIC CHART PORTLET-->
+						<!-- BEGIN STACK CHART CONTROLS PORTLET-->
+						<div class="portlet box yellow">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Stack Chart Controls</h4>
+								<div class="tools">
+									<a href="javascript:;" class="collapse"></a>
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+									<a href="javascript:;" class="remove"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="chart_5" style="height:350px;"></div>
+								<div class="btn-toolbar">
+									<div class="btn-group stackControls">
+										<input type="button" class="btn blue" value="With stacking" />
+										<input type="button" class="btn red" value="Without stacking" />
+									</div>
+									<div class="space5"></div>
+									<div class="btn-group graphControls">
+										<input type="button" class="btn" value="Bars" />
+										<input type="button" class="btn" value="Lines" />
+										<input type="button" class="btn" value="Lines with steps" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- END STACK CHART CONTROLS PORTLET-->
+						<!-- BEGIN INTERACTIVE CHART PORTLET-->
+						<div class="portlet box red">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Interactive Chart</h4>
+								<div class="tools">
+									<a href="javascript:;" class="collapse"></a>
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+									<a href="javascript:;" class="remove"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="chart_2" class="chart"></div>
+							</div>
+						</div>
+						<!-- END INTERACTIVE CHART PORTLET-->						
+					</div>
 				</div>
+				<!-- END CHART PORTLETS-->
+				<!-- BEGIN PIE CHART PORTLET-->
+				<div class="row-fluid">
+					<div class="span6">
+						<div class="portlet box yellow">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Pie Chart</h4>
+								<div class="tools">
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="graph_1" class="chart"></div>
+							</div>
+						</div>
+						<div class="portlet box purple">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Pie Chart</h4>
+								<div class="tools">
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="graph_2" class="chart"></div>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="portlet box blue">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Interactive Chart</h4>
+								<div class="tools">
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="graph_3" class="chart"></div>
+							</div>
+						</div>
+						<div class="portlet box red">
+							<div class="portlet-title">
+								<h4><i class="icon-reorder"></i>Donut Chart</h4>
+								<div class="tools">
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="graph_4" class="chart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END PIE CHART PORTLET-->
 				<!-- END PAGE CONTENT-->
 			</div>
-			<!-- END PAGE CONTAINER-->	
+			<!-- BEGIN PAGE CONTAINER-->		
 		</div>
-		<!-- END PAGE -->	 	
+		<!-- END PAGE -->	
 	</div>
 	<!-- END CONTAINER -->
 	<!-- BEGIN FOOTER -->
@@ -608,13 +634,11 @@
 	<script src="assets/js/excanvas.js"></script>
 	<script src="assets/js/respond.js"></script>
 	<![endif]-->
-        
 	<script src="assets/flot/jquery.flot.js"></script>
 	<script src="assets/flot/jquery.flot.resize.js"></script>
 	<script src="assets/flot/jquery.flot.pie.js"></script>
 	<script src="assets/flot/jquery.flot.stack.js"></script>
 	<script src="assets/flot/jquery.flot.crosshair.js"></script>
-	<script src="assets/flot/jquery.flot.categories.js"></script>        
 	<script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>	
 	<script src="assets/js/app.js"></script>		
 	<script>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>jQuery treetable</title>
+      <link rel="stylesheet" href="css/screen.css" media="screen" />
+      <link rel="stylesheet" href="css/jquery.treetable.css" />
+      <link rel="stylesheet" href="css/jquery.treetable.theme.default.css" />
+      <link href="css/jquery.treetable.css" rel="stylesheet" type="text/css" />
+      <script src="css/jquery.treetable.js"></script>
+      <script src="css/jquery-1.11.3.js"></script>
+   </head>
+   <body>
+      <div id="main">
+         <table id="example-advanced">
+            <caption>
+               <a href="#" onclick="jQuery('#example-advanced').treetable('expandAll'); return false;">Expandir</a>
+               <a href="#" onclick="jQuery('#example-advanced').treetable('collapseAll'); return false;">Recolher</a>
+            </caption>
+            <thead>
+               <tr>
+                  <th>Hospital/Especialidade/Unidade</th>
+                  <th>Quantidade</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr data-tt-id='2'>
+                  <td><span class='folder'>Tatuapé</span></td>
+                  <td>8000</td>
+               </tr>
+               <tr data-tt-id='2-1' data-tt-parent-id='2'>
+                  <td><span class='folder'>Ginecologia</span></td>
+                  <td>5000</td>
+               </tr>
+               <tr data-tt-id='2-1-1' data-tt-parent-id='2-1'>
+                  <td><span class='file'>Unidade1</span></td>
+                  <td>5000</td>
+               </tr>
+               <tr data-tt-id='2-2' data-tt-parent-id='2'>
+                  <td><span class='folder'>Neonatalogia</span></td>
+                  <td>1500</td>
+               </tr>
+               <tr data-tt-id='2-2-1' data-tt-parent-id='2-2'>
+                  <td><span class='file'>Unidade 2</span></td>
+                  <td>1500</td>
+               </tr>
+               <tr data-tt-id='2-3' data-tt-parent-id='2'>
+                  <td><span class='folder'>Centro Obstétrico</span></td>
+                  <td>1500</td>
+               </tr>
+               <tr data-tt-id='2-3-1' data-tt-parent-id='2-3'>
+                  <td><span class='file'>Unidade 3</span></td>
+                    <td>1500</td>
+               </tr>
+               <tr data-tt-id='3'>
+                  <td><span class='folder'>Ermelino</span></td>
+                  <td>4000</td>
+               </tr>
+               <tr data-tt-id='3-1' data-tt-parent-id='3'>
+                  <td><span class='folder'>Especialidade A</span></td>
+                  <td>2000</td>
+               </tr>
+               <tr data-tt-id='3-2' data-tt-parent-id='3'>
+                  <td><span class='folder'>Especialidade B</span></td>
+                  <td>2000</td>
+               </tr>
+               <tr data-tt-id='5'>
+                  <td><span class='folder'>Jabaquara</span></td>
+                  <td>1000</td>
+               </tr>
+               <tr data-tt-id='5-1' data-tt-parent-id='5'>
+                  <td><span class='folder'>Especialidade C</span></td>
+                  <td>500</td>
+               </tr>
+               <tr data-tt-id='5-1' data-tt-parent-id='5'>
+                  <td><span class='folder'>Especialidade D</span></td>
+                  <td>500</td>
+               </tr>
+
+              
+            </tbody>
+         </table>
+      </div>
+      <script src="jquery.treetable.js"></script>
+      <script>
+         $("#example-advanced").treetable({ expandable: true });
+      </script>
+   </body>
+</html>
+

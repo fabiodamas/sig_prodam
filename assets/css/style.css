@@ -52,6 +52,8 @@ h3 small, h4 small, h5 small {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+  margin:0px;
+  padding:0px;
 }
 
 h1.block, h2.block, h3.block, h4.block, h5.block, h6.block {
@@ -2675,7 +2677,8 @@ Custom portlet tabs
 Dashboard stats
 ***/
 .dashboard-stat {
-  margin-bottom: 25px;
+  margin-bottom: 4px;
+  margin-top: 4px;
 }
 
 .dashboard-stat:before,

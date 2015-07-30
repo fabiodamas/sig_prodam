@@ -172,7 +172,6 @@
 		   
 		    somePlot = $.plot("#placeholder1", [ series ], {
 		        xaxis: {
-		            // ticks: [[0,"One"],[1,"Two"], [2,"Three"],[3,"Four"]]
 		            ticks: <?= $mes_ano ?>
 		            
 		        }
@@ -655,6 +654,7 @@
 				</div>
 				<!-- END PAGE HEADER-->
 				<!-- BEGIN PAGE CONTENT-->
+                                
 				<div class="row-fluid">
                                     <div class="span7" style="width: 69%">
                                             <!-- BEGIN INLINE TABS PORTLET-->
@@ -683,14 +683,14 @@
                                                                                                 	</div>                                                                                                
                                                                                                 -->
 
-                                                                                                <div id="placeholder1" style="width:600px;height:300px"></div>
+                                                                                                <div id="placeholder1" style="width:580px;height:450px"></div>
 
                                                                                             </div>
                                                                                         
                                                                                             <div class="tab-pane" id="tab_1_2">
                                                                                                 
                                                                                                 <div class="demo-container2">
-                                                                                                        <div id="placeholder2" class="demo-placeholder2"></div>
+                                                                                                    <div id="placeholder2" class="demo-placeholder2"></div>
                                                                                                 </div>
                                                                                                 
                                                                                             </div>
@@ -715,16 +715,67 @@
                                                                                     </a>                                                                                                    
                                                                                 
                                                                         </div>
+                                                                        
+                                                                        <div class="dashboard-stat green">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>270</h1>
+                                                                                          <h5>
+                                                                                                Internações efetuadas hoje
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div> 
+                                                                        
+                                                                        
+                                                                        <div class="dashboard-stat green">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>5.382</h1>
+                                                                                          <h5>
+                                                                                                Total de leitos ativos
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div>                                                                        
+                                                                        
+                                                                        
+                                                                        <div class="dashboard-stat green">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>834</h1>
+                                                                                          <h5>
+                                                                                                Altas efetuadas hoje
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div>                                                                           
+                                                                        
+                                                                        
+                                                                        <div class="dashboard-stat green">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>38,23%</h1>
+                                                                                          <h5>
+                                                                                                Taxa de ocupação atual
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div>   
+                                                                        
+                                                                        
+                                                                        <div class="dashboard-stat green">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>293</h1>
+                                                                                          <h5>
+                                                                                                Tempo médio internação agora
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div>                                                                           
                                                                            
                                                                     </div>
                                                             </div>
-                                  
-                                                        
-                                                        
-                                                        
                                                     </div>
                                             </div>
                                             <!-- END INLINE TABS PORTLET-->
+                                            
                                     </div>
 
                                     
@@ -819,6 +870,11 @@
                                     </div>
                                     
 				</div>
+                                
+                                <div class="row-fluid">
+                                    teste
+                                </div>                                
+                                
 				<!-- END PAGE CONTENT-->
 			</div>
 			<!-- END PAGE CONTAINER-->	

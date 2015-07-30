@@ -1,9 +1,9 @@
 .demo-container1 {
 	box-sizing: border-box;
-	width: 650px;
+	width: 550px;
 	height: 250px;
-	padding: 0px 15px 15px 15px;
-	margin: 15px auto 30px auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0px auto 0px auto;
 	border: 1px solid #ddd;
 	background: #fff;
 	background: linear-gradient(#f6f6f6 0, #fff 50px);
@@ -32,10 +32,10 @@
 
 .demo-container2 {
 	box-sizing: border-box;
-	width: 650px;
+	width: 550px;
 	height: 250px;
-	padding: 0px 15px 15px 15px;
-	margin: 15px auto 30px auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0px auto 0px auto;
 	border: 1px solid #ddd;
 	background: #fff;
 	background: linear-gradient(#f6f6f6 0, #fff 50px);

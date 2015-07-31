@@ -656,7 +656,7 @@
 				<!-- BEGIN PAGE CONTENT-->
                                 
 				<div class="row-fluid">
-                                    <div class="span7" style="width: 69%">
+                                    <div class="span7" style="width: 69% ; overflow: scroll; height: 650px" >
                                             <!-- BEGIN INLINE TABS PORTLET-->
                                             <div class="portlet box green">
                                                     <div class="portlet-title">
@@ -776,6 +776,103 @@
                                             </div>
                                             <!-- END INLINE TABS PORTLET-->
                                             
+                                            <!-- BEGIN INLINE TABS PORTLET-->
+                                            <div class="portlet box blue">
+                                                    <div class="portlet-title">
+                                                            <h4><i class="icon-reorder"></i>Consultas</h4>
+                                                            <div class="tools">
+                                                                    <a href="javascript:;" class="collapse"></a>
+                                                                    <a href="#portlet-config" data-toggle="modal" class="config"></a>
+                                                            </div>
+                                                    </div>
+                                                    <div class="portlet-body">
+                                                            <div class="row-fluid">
+                                                                    <div class="span8">
+                                                                            <!--BEGIN TABS-->
+                                                                            <div class="tabbable tabbable-custom">
+                                                                                    <ul class="nav nav-tabs">
+                                                                                            <li class="active"><a href="#tab_1_1" data-toggle="tab">Histórico de Internação</a></li>
+                                                                                            <li class=""><a href="#tab_1_2" data-toggle="tab">Histórico de Altas</a></li>
+                                                                                    </ul>
+                                                                                    <div class="tab-content">
+                                                                                            <div class="tab-pane active" id="tab_1_1">
+                                                                                                <!-- 
+                                                                                                	<div class="demo-container1">
+                                                                                                    	    <div id="placeholder1" class="demo-placeholder1"></div>
+                                                                                                	</div>                                                                                                
+                                                                                                -->
+
+                                                                                                <div id="placeholder1" style="width:580px;height:450px"></div>
+
+                                                                                            </div>
+                                                                                        
+                                                                                            <div class="tab-pane" id="tab_1_2">
+                                                                                                
+                                                                                                <div class="demo-container2">
+                                                                                                    <div id="placeholder2" class="demo-placeholder2"></div>
+                                                                                                </div>
+                                                                                                
+                                                                                            </div>
+                                                                                    </div>
+                                                                            </div>
+                                                                            <!--END TABS-->
+                                                                    </div>
+                                                                
+                                                                    <div class="span4 responsive" data-tablet="span6" data-desktop="span4">
+                                                                        <!-- <a class="btn purple big">pricing options <i class="m-icon-big-swapright m-icon-white"></i></a> -->
+
+                                                                        
+                                                                        <div class="dashboard-stat blue">
+                                                                                
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>7.148</h1>
+                                                                                         
+                                                                                          <h5>
+                                                                                                Consultas Agendadas para Hoje
+                                                                                            </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                                
+                                                                        </div>
+                                                                        
+                                                                        <div class="dashboard-stat blue">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>4.752</h1>
+                                                                                          <h5>
+                                                                                                Pacientes Atendidos Hoje
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div> 
+                                                                        
+                                                                        
+                                                                        <div class="dashboard-stat blue">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>288</h1>
+                                                                                          <h5>
+                                                                                                Absenteísmo Hoje - Paciente
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div>                                                                        
+                                                                        
+                                                                        
+                                                                        <div class="dashboard-stat blue">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>18</h1>
+                                                                                          <h5>
+                                                                                                Absenteísmo Hoje - Médico
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div>                                                                           
+                                                                           
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+                                            </div>
+                                            <!-- END INLINE TABS PORTLET-->                                            
+                                            
                                     </div>
 
                                     
@@ -870,10 +967,6 @@
                                     </div>
                                     
 				</div>
-                                
-                                <div class="row-fluid">
-                                    teste
-                                </div>                                
                                 
 				<!-- END PAGE CONTENT-->
 			</div>

@@ -163,9 +163,6 @@
     <script type="text/javascript">       
 		$(function() {
 
-			// var data = [ ["Fev/2015", 10], ["Mar/2015", 8], ["Abr/2015", 4], ["Mai/2015", 13], ["Jun/2015", 17], ["Jul/2015", 9] ];
-
-		    // var series = {data: [[0, 5.2], [1, 3], [2, 9.2], [3, 10]],
 		    var series = {data: <?= $monta ?>,
 		                  lines: {show: false},
 		                  bars: {show: true, barWidth: 0.75, align:'center'}}
@@ -223,7 +220,102 @@
 		                    
 				});
 		});
-	</script>        
+	</script>      
+        
+        <script type="text/javascript">       
+                    $(function() {
+
+                            var series = [
+                                        
+                                        {data: [[0,5000]], color: "blue"}, 
+                                        {data: [[1,3000]], color: "blue"},
+                                        {data: [[2,2000]], color: "blue"},
+                                        {data: [[3,1500]], color: "blue"}, 
+                                        {data: [[4,3500]], color: "blue"}, 
+                                        {data: [[5,7000]], color: "blue"}
+                                    
+        
+                                        ];
+                                        
+                                            
+
+                            somePlot = $.plot("#placeholder3",series, {
+                                series: {
+                                    bars: {
+                                        show: true,
+                                        barWidth: 0.3,
+                                        align: "center",
+                                        lineWidth: 0,
+                                        fill:.75
+                                    }
+                                },
+                                xaxis: {
+                                    // drop the categories plugin and label the ticks yourself
+                                    // you'll thank me in the long run
+                                    ticks: [
+                                                [0,"2015/02"],
+                                                [1,"2015/03"],
+                                                [2,"2015/04"],
+                                                [3,"2015/05"],
+                                                [4,"2015/06"],
+                                                [5,"2015/07"]
+                                           ]
+                                }
+                            });
+
+                        
+                        var ctx = somePlot.getCanvas().getContext("2d");
+                        var data = somePlot.getData()[0].data;
+                        var xaxis = somePlot.getXAxes()[0];
+                        var yaxis = somePlot.getYAxes()[0];
+                        var offset = somePlot.getPlotOffset();
+                        ctx.font = "13px 'Arial'";
+                        ctx.fillStyle = "black";
+                        
+                        for (var i = 0; i < data.length; i++){
+                            var text = '';
+                            var metrics = ctx.measureText(text);
+                            var xPos = (xaxis.p2c(data[i][0])+offset.left) - metrics.width/2;
+                            var yPos = yaxis.p2c(data[i][1]) + offset.top - 5;
+                            ctx.fillText(text, xPos, yPos);
+                        }
+                    });        
+        </script>        
+        
+        
+        
+        
+        
+    <script type="text/javascript">       
+		$(function() {
+
+		    var series = {data: <?= $monta ?>,
+		                  lines: {show: false},
+		                  bars: {show: true, barWidth: 0.75, align:'center'}}
+		   
+		    somePlot = $.plot("#placeholder4", [ series ], {
+		        xaxis: {
+		            ticks: <?= $mes_ano ?>
+		            
+		        }
+		    });
+		    
+		    var ctx = somePlot.getCanvas().getContext("2d");
+		    var data = somePlot.getData()[0].data;
+		    var xaxis = somePlot.getXAxes()[0];
+		    var yaxis = somePlot.getYAxes()[0];
+		    var offset = somePlot.getPlotOffset();
+		    ctx.font = "13px 'Arial'";
+		    ctx.fillStyle = "black";
+		    for (var i = 0; i < data.length; i++){
+		        var text = data[i][1] + '';
+		        var metrics = ctx.measureText(text);
+		        var xPos = (xaxis.p2c(data[i][0])+offset.left) - metrics.width/2;
+		        var yPos = yaxis.p2c(data[i][1]) + offset.top - 5;
+		        ctx.fillText(text, xPos, yPos);
+		    }
+		});        
+    </script>           
         
         
 </head>
@@ -345,7 +437,7 @@
 								<a href="#">
 								<span class="photo"><img src="./assets/img/avatar1.jpg" alt="" /></span>
 								<span class="subject">
-								<span class="from">Bob Nilson</span>
+								<span class="from">João Marcos</span>
 								<span class="time">2 hrs</span>
 								</span>
 								<span class="message">
@@ -446,7 +538,7 @@
 					<li class="dropdown user">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<img alt="" src="assets/img/avatar1_small.jpg" />
-						<span class="username">Bob Nilson</span>
+						<span class="username">João Marcos</span>
 						<i class="icon-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu">
@@ -684,6 +776,7 @@
                                                                                                 -->
 
                                                                                                 <div id="placeholder1" style="width:580px;height:450px"></div>
+                                                                                                <center><h7 class="alert-block" > Total de internações por mês</h7></center>
 
                                                                                             </div>
                                                                                         
@@ -788,34 +881,8 @@
                                                     <div class="portlet-body">
                                                             <div class="row-fluid">
                                                                     <div class="span8">
-                                                                            <!--BEGIN TABS-->
-                                                                            <div class="tabbable tabbable-custom">
-                                                                                    <ul class="nav nav-tabs">
-                                                                                            <li class="active"><a href="#tab_1_1" data-toggle="tab">Histórico de Internação</a></li>
-                                                                                            <li class=""><a href="#tab_1_2" data-toggle="tab">Histórico de Altas</a></li>
-                                                                                    </ul>
-                                                                                    <div class="tab-content">
-                                                                                            <div class="tab-pane active" id="tab_1_1">
-                                                                                                <!-- 
-                                                                                                	<div class="demo-container1">
-                                                                                                    	    <div id="placeholder1" class="demo-placeholder1"></div>
-                                                                                                	</div>                                                                                                
-                                                                                                -->
-
-                                                                                                <div id="placeholder1" style="width:580px;height:450px"></div>
-
-                                                                                            </div>
-                                                                                        
-                                                                                            <div class="tab-pane" id="tab_1_2">
-                                                                                                
-                                                                                                <div class="demo-container2">
-                                                                                                    <div id="placeholder2" class="demo-placeholder2"></div>
-                                                                                                </div>
-                                                                                                
-                                                                                            </div>
-                                                                                    </div>
-                                                                            </div>
-                                                                            <!--END TABS-->
+                                                                        <div id="placeholder3" style="width:580px;height:350px"></div>
+                                                                        <center><h7 class="alert-block" > Consultas realizadas por mês</h7></center>
                                                                     </div>
                                                                 
                                                                     <div class="span4 responsive" data-tablet="span6" data-desktop="span4">
@@ -871,7 +938,58 @@
                                                             </div>
                                                     </div>
                                             </div>
-                                            <!-- END INLINE TABS PORTLET-->                                            
+                                            <!-- END INLINE TABS PORTLET-->   
+                                            
+                                            <!-- BEGIN INLINE TABS PORTLET-->
+                                            <div class="portlet box yellow">
+                                                    <div class="portlet-title">
+                                                            <h4><i class="icon-reorder"></i>Pacientes</h4>
+                                                            <div class="tools">
+                                                                    <a href="javascript:;" class="collapse"></a>
+                                                                    <a href="#portlet-config" data-toggle="modal" class="config"></a>
+                                                            </div>
+                                                    </div>
+                                                    <div class="portlet-body">
+                                                            <div class="row-fluid">
+                                                                    <div class="span8">
+                                                                        <div id="placeholder4" style="width:580px;height:350px"></div>
+                                                                        <center><h7 class="alert-block" >  Acumulado total de pacientes cadastrados por mês </h7></center>
+                                                                        
+                                                                    </div>
+                                                                
+                                                                    <div class="span4 responsive" data-tablet="span6" data-desktop="span4">
+                                                                        <!-- <a class="btn purple big">pricing options <i class="m-icon-big-swapright m-icon-white"></i></a> -->
+
+                                                                        
+                                                                        <div class="dashboard-stat yellow">
+                                                                                
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>7.148</h1>
+                                                                                         
+                                                                                          <h5>
+                                                                                                Total de pacientes cadastrados
+                                                                                            </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                                
+                                                                        </div>
+                                                                        
+                                                                        <div class="dashboard-stat yellow">
+                                                                                    <a class="more" href="#">
+                                                                                         <h1>4.752</h1>
+                                                                                          <h5>
+                                                                                                Total de pacientes cadastrados hoje
+                                                                                          </h5>
+                                                                                         <i class="m-icon-swapright m-icon-white"></i>
+                                                                                    </a>                                                                                                    
+                                                                        </div> 
+                                                                           
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+                                            </div>
+                                            <!-- END INLINE TABS PORTLET-->                                              
+                                            
                                             
                                     </div>
 
